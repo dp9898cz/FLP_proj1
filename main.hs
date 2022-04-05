@@ -1,4 +1,4 @@
--- simplify-bkg
+-- flp21-fun
 -- author: Daniel Pátek (xpatek08)
 -- VUT FIT 04/2022
 
@@ -23,7 +23,7 @@ simplify "-i" content = show $ parseGrammar content
 simplify "-1" content = show $ firstStep $ parseGrammar content
 simplify "-2" content = show $ secondStep $ parseGrammar content
 simplify "-h" _ = "Simplify BKG usage\n" ++
-    "    ./simplify-bkg [-i|-1|-2] [filename] \n" ++
+    "    ./flp21-fun [-i|-1|-2] [filename] \n" ++
     "    [-i] Print grammar after parsing.\n" ++
     "    [-1] Print grammar after first step of algoritm.\n" ++
     "    [-2] Print grammar after completed algoritm.\n"

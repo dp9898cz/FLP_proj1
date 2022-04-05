@@ -6,16 +6,16 @@ Datum: 2022-04-02
 Program, který odstraňuje zbytečné symboly z bezkontextové gramatiky.
 Implementováno podle algoritmu 4.3 z opory k předmětu TIN.
 
-K překladu programu složí soubor makefile. Pomocí příkazu make se spustí překlad a vznikne soubor simplify-bkg.
+K překladu programu složí soubor makefile. Pomocí příkazu make se spustí překlad a vznikne soubor flp21-fun.
 Tento program se dá spouštět s následujícími parametry:
 
-    ./simplify-bkg -h
+    ./flp21-fun -h
         Vypíše nápovědu.
-    ./simplify-bkg -i [soubor_s_gramatikou]
+    ./flp21-fun -i [soubor_s_gramatikou]
         Vypíše zpracovanou gramatiku v základním tvaru.
-    ./simplify-bkg -1 [soubor_s_gramatikou]
+    ./flp21-fun -1 [soubor_s_gramatikou]
         Vypíše gramatiku po prvním kroku algoritmu.
-    ./simplify-bkg -2 [soubor_s_gramatikou]
+    ./flp21-fun -2 [soubor_s_gramatikou]
         Vypíše gramatiku po kompletním dokončení algoritmu.
 
 [soubor_s_gramatikou] je volitelný vstupní parametr, pokud není zadaný, čte program ze standartního vstupu.
