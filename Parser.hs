@@ -73,13 +73,13 @@ parseRules = map parseRule
                         error ("Bad syntax of rule: " ++ rule)
                     where
                         leftSideCheck :: String -> Bool
-                        leftSideCheck (n:nx) = n `elem` ['A'..'Z'] && head nx == '-' --todo check actual grammar somehow
+                        leftSideCheck (n:nx) = n `elem` ['A'..'Z'] && head nx == '-'
                         leftSideCheck _ = False
 
                         rightSideCheck :: String -> Bool
                         rightSideCheck [] = False
-                        rightSideCheck [t] = t `elem` (['a'..'z'] ++ ['#'] ++ ['A'..'Z']) || (t == '#') --todo check actual grammar
-                        rightSideCheck (t:tx) = t `elem` (['a'..'z'] ++ ['A'..'Z']) && rightSideCheck tx --todo check actual grammar
+                        rightSideCheck [t] = t `elem` (['a'..'z'] ++ ['#'] ++ ['A'..'Z']) || (t == '#')
+                        rightSideCheck (t:tx) = t `elem` (['a'..'z'] ++ ['A'..'Z']) && rightSideCheck tx
                 composeRule _ = error ("In composing new rule - Bad syntax of rule: " ++ rule)
 
 -- split String on specific character
