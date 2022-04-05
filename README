@@ -1,0 +1,37 @@
+Funkcionální projekt do předmětu FLP 2022
+Varianta: simplify-bkg
+Autor: Daniel Pátek (xpatek08)
+Datum: 2022-04-02
+
+Program, který odstraňuje zbytečné symboly z bezkontextové gramatiky.
+Implementováno podle algoritmu 4.3 z opory k předmětu TIN.
+
+K překladu programu složí soubor makefile. Pomocí příkazu make se spustí překlad a vznikne soubor simplify-bkg.
+Tento program se dá spouštět s následujícími parametry:
+
+    ./simplify-bkg -h
+        Vypíše nápovědu.
+    ./simplify-bkg -i [soubor_s_gramatikou]
+        Vypíše zpracovanou gramatiku v základním tvaru.
+    ./simplify-bkg -1 [soubor_s_gramatikou]
+        Vypíše gramatiku po prvním kroku algoritmu.
+    ./simplify-bkg -2 [soubor_s_gramatikou]
+        Vypíše gramatiku po kompletním dokončení algoritmu.
+
+[soubor_s_gramatikou] je volitelný vstupní parametr, pokud není zadaný, čte program ze standartního vstupu.
+
+Příklad vstupu:
+A,B,C,S
+a,b
+S
+A->AB
+B->b
+S->A
+S->a
+
+Popis souborů:
+makefile - slouží pro překlad programu
+main.hs - zpracování argumentů, načtení souboru a spuštění další akce
+Parser.hs - zpracování vstupní gramatiky, odhalení chyb
+Simplify.hs - implementace algoritmu pro odstarnění zbytečných symbolů gramatiky
+Types.hs - typové deklarace pomocných struktur
