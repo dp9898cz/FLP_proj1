@@ -4,6 +4,7 @@
 
 module Main where
 
+import Control.Applicative
 import Types (Grammar)
 import System.Environment ( getArgs )
 import System.IO (openFile, getContents, hGetContents, IOMode (ReadMode))
